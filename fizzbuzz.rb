@@ -1,11 +1,22 @@
-1.upto(100) do |i|
-  if i % 5 == 0 && i % 3 == 0
-    puts "FizzBuzz"
-  elsif i % 5 == 0
-    puts "Buzz"
-  elsif i % 3 == 0
-    puts "Fizz"
-  else
-    puts i
+def fizzbuzz_value(i)
+    value = ''
+    value += 'Fizz' if i % 5 == 0
+    value +='Buzz' if i % 3 == 0
+    puts value.empty? ? i : value
+end
+
+def fizzbuzz(a,b)
+  a.upto(b) do |i|
+    fizzbuzz_value(i)
   end
 end
+
+
+
+fizzbuzz(1,30)
+
+
+
+
+
+
